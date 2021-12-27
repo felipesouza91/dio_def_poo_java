@@ -8,9 +8,13 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@ToString
-public class Mentoria {
-  private String titulo;
-  private String descricao;
+@ToString(callSuper = true)
+public class Mentoria extends Conteudo{
+
   private LocalDate data;
+
+  @Override
+  public double calcularXP() {
+    return  XP_PADRAO + 20d;
+  }
 }

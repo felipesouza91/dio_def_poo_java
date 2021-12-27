@@ -6,11 +6,13 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
-public class Curso {
+@ToString(callSuper = true)
+public class Curso extends Conteudo{
 
-  private String titulo;
-  private String descricao;
   private Integer cargaHoraria;
 
+  @Override
+  public double calcularXP() {
+    return cargaHoraria * XP_PADRAO;
+  }
 }
