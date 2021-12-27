@@ -3,6 +3,7 @@ package dev.fsantana.model;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.LinkedHashSet;
 import java.util.Optional;
@@ -10,6 +11,7 @@ import java.util.Set;
 
 @Getter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
 public class Dev {
 
   @Setter
@@ -21,6 +23,7 @@ public class Dev {
 
   public void increverBootcamp(Bootcamp bootcamp) {
     conteudoInscritos.addAll(bootcamp.getConteudos());
+    bootcamp.getDevsIncritos().add(this);
   }
 
   public void progredir() {

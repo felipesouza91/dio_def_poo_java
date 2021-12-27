@@ -37,5 +37,7 @@ public class Main {
     System.out.println("----------------------------");
     dev.getConteudoInscritos().forEach((conteudo -> System.out.println(conteudo.toString())));
     System.out.println(dev.calcularXP());
+    System.out.println("----------------------------");
+    bootcamp.getDevsIncritos().forEach(deve -> System.out.println(deve.toString()));
   }
 }
